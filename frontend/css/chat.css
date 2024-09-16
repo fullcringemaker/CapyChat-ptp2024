@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url('/frontend/images/апельсины2.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+}
+header {
+    background-color: #F46E0B;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+#clickableContainer {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #F46E0B;
+    width: 12%;
+}
+#Avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 5px 20px 0px 30px;
+    cursor: pointer; 
+}
+#Avatar:hover {
+    opacity:0.8;
+}
+#Nickname {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translate(0,-50%);
+    user-select: none;
+    font-family: "Open Sans";
+    font-size: 1.6em;
+    color: #242323;
+    cursor: pointer;
+}
+#Nickname:hover {
+    opacity:0.8;
+}
+#nameCopmapy {
+    color: black;
+    font-family: "Open Sans";
+    font-size: 2em;
+    user-select: none;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+footer {
+    position: fixed;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffab61;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    border: 3px solid #8ac27a;
+    display: flex;
+    width: 50%; 
+    z-index: 2;
+}
+#clip {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#clip:hover {
+    opacity: 0.6;
+    filter: grayscale(100%);
+}
+#textMessege {
+    color: black;
+    font-family: "Open Sans";
+    font-size: 1em;
+    font-weight: 400;
+    border: 0;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    height: 30px;
+    padding: 15px 20px;
+    overflow: hidden;
+    resize: none;
+}
+#Send {
+    background-image: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    user-select: none;
+}
+#Send img {
+    width: 100%;
+    height: 100%;
+}
+#Send:hover img {
+    opacity: 0.6;
+}
+main {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    width: 80%;
+    max-width: 700px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 100px;
+    overflow-y: auto;
+}
+.messege-text-left, .messege-text-right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 350px;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    min-width: 150px; 
+}
+.messege-text-left {
+    background-color: white;
+}
+.messege-text-left p, .messege-text-right p {
+    color: black;
+    font-family: "Open Sans";
+    font-size: 1em;
+    font-weight: 500;
+    word-break: break-word;
+}
+.messege-text-left p:nth-child(2) {
+    font-size: 0.7em;
+    font-weight: 400;
+}
+.messege-text-right {
+    background-color: #c9f5bc;
+    margin-left: auto;
+    border: 1px solid rgb(40, 120, 0);
+}
+.messege-text-right p:nth-child(2) {
+    font-size: 0.6em;
+    font-weight: 400;
+}
+.messege-file-right, .messege-file-left {
+    display: flex;
+    flex-direction: column;
+    background-color: #81ecfc;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #b6daff;
+    max-width: 250px; 
+}
+.messege-file-right {
+    margin-left: auto;
+}
+.file-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+}
+.file-icon img {
+    width: 40px;
+    height: 40px;
+}
+.file-name {
+    margin-left: 10px;
+}
+.file-name a {
+    color: #007bff;
+    text-decoration: underline;
+    font-size: 1em;
+}
+.file-name a:hover {
+    text-decoration: none;
+    color: #0056b3;
+}
+.messege-file-right p, .messege-file-left p {
+    font-size: 0.7em;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+/* Адаптивные стили */
+@media only screen and (max-width: 600px) {
+    #textMessege {
+        width: 80%; 
+    }
+    .messege-text-left, .messege-text-right {
+        max-width: 100%; 
+    }
+    footer {
+        width: 100%; 
+    }
+    main {
+        width: 100%; 
+    }
+}
+#profileButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 15px; 
+    transform: translateY(-50%);
+}
+#profileButton img {
+    width: 30px; 
+    height: 30px;
+}
+#profileButton:hover img {
+    opacity: 0.6;
+}
