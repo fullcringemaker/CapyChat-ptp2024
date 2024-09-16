@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* { 
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    background-color: #ffab61;
+    height: 700px;
+}
+#Logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 6%;
+}
+#nameCopmapy {
+    color: black;
+    font-family: "Open Sans";
+    font-size: 2em;
+    user-select: none;
+    font-weight: 550;
+    margin-top: 20px;
+}
+
+#registText, #error {
+    color: #4a4a4a;
+    font-size: 0.9em;
+    font-family: "Open Sans";
+    user-select: none;
+    font-weight: 400;
+    
+    display: block;
+    width: 20%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    right: 0;
+    left: 0;
+}
+
+
+select {
+    border-radius: 10px;
+    padding-left: 15px;
+    font-family: "Open Sans";
+    font-size: 1.2em;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 0;
+    cursor: pointer;
+    padding-right: 20px;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%24%20height%3D%24%20viewBox%3D%0%200%2024%2024%20fill%3D%23000%3E%3Cpath%20d%3D%M8%12l8-8%3%3-l-8%8%3-3z%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-top: 15px;
+}
+
+option {
+    color: black;
+    font-family: "Open Sans";
+}
+option:hover {
+    background-color: #F46E0B;
+}
+
+    
+#phone {
+    border-radius: 10px;
+    padding-left: 15px;
+    font-family: "Open Sans";
+    font-size: 1.2em;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 0;
+
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%24%20height%3D%24%20viewBox%3D%0%200%2024%2024%20fill%3D%23000%3E%3Cpath%20d%3D%M8%12l8-8%3%3-l-8%8%3-3z%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-top: 6px;
+}
+
+#Next {
+    border-radius: 10px;
+    padding-left: 15px;
+    font-family: "Open Sans";
+    font-size: 1.2em;
+    background-color: #F46E0B;
+    color: #333;
+    border: 0;
+    cursor: pointer;
+    
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%24%20height%3D%24%20viewBox%3D%0%200%2024%2024%20fill%3D%23000%3E%3Cpath%20d%3D%M8%12l8-8%3%3-l-8%8%3-3z%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-top: 20px;
+}
+#Next:hover {
+    background-color: #fa8e42;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+select, #phone,#Next {
+    width: 20%;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+

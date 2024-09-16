@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/frontend/images/апельсины2.jpg');
+    background-size: 100%;
+    background-repeat: repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#DataBlock {
+    background-color: #ffc98c;
+    width: 70%;
+    height: 80%;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+}
+
+#name {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 2.5em;
+    font-weight: 500;
+    text-align: center;
+    user-select: none;
+    line-height: 1.2; 
+}
+
+#leftSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 35px;
+}
+
+#avatar {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    margin-left: 50px;
+}
+
+.strData {
+    background-color: white;
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#firstName, #surname, #phoneNumber, #nickname {
+    width: calc(100% - 48px);
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    font-size: 1em;
+    margin-right: 8px;
+    padding-left: 6px;
+}
+
+.edit, .edit-green, .edit-red {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: #ffab61;
+}
+
+.edit-green {
+    background-color: #4CAF50;
+    display: none; 
+    margin-right: 5px; 
+}
+
+.edit-red {
+    background-color: #F44336;
+    display: none; 
+}
+
+.edit:hover, .edit-green:hover, .edit-red:hover {
+    opacity: 0.6;
+}
+
+.edit-green .imgEdit {
+    margin-top: 3.5px;
+    width: 25px;
+    height: 25px; 
+}
+
+.edit-red .imgEdit {
+    margin-top: 3.5px;
+    width: 30px; 
+    height: 30px; 
+}
+
+#editAvaBlock .edit {
+    position: absolute;
+    border-radius: 50%;
+    right: -1%;
+    top: 24%;
+    border: 2px solid black;
+}
+
+#editAvaBlock .edit img {
+    height: 25px;
+    width: 25px;
+}
+
+.edit:hover {
+    opacity: 0.6;
+}
+
+#editAvaBlock .edit:hover {
+    opacity: 1;
+    height: 50px;
+    width: 50px;
+    right: -2%;
+    top: 22%;
+}
+
+#editAvaBlock .edit:hover img {
+    height: 30px;
+    width: 30px;
+}
+
+.imgEdit {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+#editAvaBlock {
+    position: relative;
+    text-align: center;
+}
+
+#rightSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.helpText {
+    color: black;
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.popup {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    width: 80%;
+    z-index: 1;
+    font-size: 1em;
+}
+
+.popup.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.popup-success {
+    background-color: #4CAF50; 
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 10%; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 10%; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+#saveChanges {
+    background-color: #F46E0B;
+    color: white;
+    width: 96.5%;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+#saveChanges:hover {
+    opacity: 0.7;
+}
