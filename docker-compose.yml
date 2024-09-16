@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  # Сервис базы данных PostgreSQL
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: chatdb
+    volumes:
+      # Храним данные базы данных в volume
+      - postgres_data:/var/lib/postgresql/data
+      # Инициализируем базу данных с помощью SQL скрипта
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"  # Открываем порт для доступа к базе данных
+    networks:
+      - backend  # Создаем общую сеть для связи сервисов
+
+  # Сервис Go-приложения
+  app:
+    build:
+      context: .  # Контекст сборки — текущая директория
+      dockerfile: Dockerfile  # Используем Dockerfile для сборки
+    depends_on:
+      - db  # Зависимость от сервиса базы данных
+    environment:
+      DB_HOST: db  # Название хоста базы данных, соответствует имени сервиса
+      DB_PORT: 5432  # Порт для подключения к PostgreSQL
+      DB_USER: username  # Имя пользователя базы данных
+      DB_PASSWORD: password  # Пароль для базы данных
+      DB_NAME: chatdb  # Название базы данных
+    ports:
+      - "8080:8080"  # Открываем порт для веб-приложения
+    volumes:
+      - ./frontend:/app/frontend  # Привязываем папку фронтенда для статических файлов
+      - ./uploads:/app/uploads  # Привязываем папку uploads для хранения загруженных файлов
+    command: ["/app/main"]  # Команда для запуска Go-приложения
+    networks:
+      - backend  # Общая сеть с базой данных
+
+volumes:
+  postgres_data:
+
+networks:
+  backend:
