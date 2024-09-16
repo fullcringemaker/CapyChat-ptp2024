@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Вячеслав Гуров, Трофименко Дмитрий">
+    <meta name="description" content="Чат">
+    <meta name="keywords" content="capy, Capy, Chat, CapyChat">
+    <title>CapyChat</title>
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <header>
+        <a id="clickableContainer" href="http://localhost:8080/PersonalData.html">
+            <img onmousedown="return false" id="Avatar" src="images/капи1.jpg" alt="Avatar">
+            <span id="Nickname">Профиль</span>
+        </a>
+        <span id="nameCopmapy">CapyChat</span>
+        <button id="profileButton" href="http://localhost:8080/index.html">
+            <img src="images/exitacc.png" alt="Exit Account">
+        </button>
+    </header>
+    
+<main id="main">
+    <div class="messege-text-left">
+        <p>Никнейм</p>
+        <p>Сообщение такое вот мда длинное вот ещё белое и в 2 строки почти</p>
+        <p>23.47</p>
+    </div>
+    <div style="height: 100px;"></div>
+</main>
+<footer>
+    <img onmousedown="return false" id="clip" src="images/скрепка.png" alt="Attach File">
+    <input type="file" id="fileInput" style="display:none;" accept="*/*">
+    <textarea id="textMessege" oninput="autoResize(this)" placeholder="Сообщение"></textarea>
+    <button id="Send" onclick="SendMessage()">
+        <img onmousedown="return false" src="images/send1.png">
+    </button>
+</footer>
+<script src="js/chat.js"></script>
+</body>
+</html>

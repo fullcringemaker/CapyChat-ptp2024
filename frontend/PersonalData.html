@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Вячеслав Гуров, Трофименко Дмитрий">
+    <meta name="description" content="Мой Аккаунт">
+    <meta name="keywords" content="capy, Capy, Chat, CapyChat">
+    <title>Персональные данные</title>
+    <link rel="stylesheet" href="/frontend/css/PersonalData.css">
+</head>
+<body>
+<div class="container">
+    <div id="DataBlock">
+            <span id="name">
+                Персональные данные<br>
+                пользователя Capychat
+            </span>
+        <div id="leftSection">
+            <div id='editAvaBlock'>
+                <img onmousedown="return false" id="avatar" src="/frontend/images/капи1.jpg" alt="Logo">
+                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                <button class="edit" onclick="editAvatar()">
+                    <img src='/frontend/images/редактировать.png' alt="Редактировать" class="imgEdit">
+                </button>
+            </div>
+        </div>
+        <div id="rightSection">
+            <div class="strData">
+                <input id="firstName" type="text" value="Имя" placeholder=" Введите новое имя" readonly>
+                <button class="edit" onclick="editField('firstName')">
+                    <img src='/frontend/images/редактировать.png' alt="Редактировать" class="imgEdit">
+                </button>
+                <button class="edit-green" id="save-firstName" onclick="saveField('firstName')">
+                    <img src='/frontend/images/yes.png' alt="Сохранить" class="imgEdit">
+                </button>
+                <button class="edit-red" id="cancel-firstName" onclick="cancelEdit('firstName')">
+                    <img src='/frontend/images/no.png' alt="Отмена" class="imgEdit">
+                </button>
+            </div>
+            <span class='helpText'>Имя</span>
+            <div class="strData">
+                <input id="surname" type="text" value="Фамилия" placeholder=" Введите новую фамилию" readonly>
+                <button class="edit" onclick="editField('surname')">
+                    <img src='/frontend/images/редактировать.png' alt="Редактировать" class="imgEdit">
+                </button>
+                <button class="edit-green" id="save-surname" onclick="saveField('surname')">
+                    <img src='/frontend/images/yes.png' alt="Сохранить" class="imgEdit">
+                </button>
+                <button class="edit-red" id="cancel-surname" onclick="cancelEdit('surname')">
+                    <img src='/frontend/images/no.png' alt="Отмена" class="imgEdit">
+                </button>
+            </div>
+            <span class='helpText'>Фамилия</span>
+            <div class="strData">
+                <input id="phoneNumber" type="text" value="Номер" placeholder=" Введите новый номер" readonly>
+                <button class="edit" onclick="editField('phoneNumber')">
+                    <img src='/frontend/images/редактировать.png' alt="Редактировать" class="imgEdit">
+                </button>
+                <button class="edit-green" id="save-phoneNumber" onclick="saveField('phoneNumber')">
+                    <img src='/frontend/images/yes.png' alt="Сохранить" class="imgEdit">
+                </button>
+                <button class="edit-red" id="cancel-phoneNumber" onclick="cancelEdit('phoneNumber')">
+                    <img src='/frontend/images/no.png' alt="Отмена" class="imgEdit">
+                </button>
+            </div>
+            <span class='helpText'>Номер телефона</span>
+            <div class="strData">
+                <input id="nickname" type="text" value="Никнейм" placeholder=" Введите новый никнейм" readonly>
+                <button class="edit" onclick="editField('nickname')">
+                    <img src='/frontend/images/редактировать.png' alt="Редактировать" class="imgEdit">
+                </button>
+                <button class="edit-green" id="save-nickname" onclick="saveField('nickname')">
+                    <img src='/frontend/images/yes.png' alt="Сохранить" class="imgEdit">
+                </button>
+                <button class="edit-red" id="cancel-nickname" onclick="cancelEdit('nickname')">
+                    <img src='/frontend/images/no.png' alt="Отмена" class="imgEdit">
+                </button>
+            </div>
+            <span class='helpText'>Никнейм</span>
+        </div>
+        <button id="saveChanges" onclick="goToChatPage()">Вернуться на страницу чата</button>
+    </div>
+</div>
+<div id="popup" class="popup">
+    <span class="popuptext" id="popupMessage"></span>
+</div>
+<script src="/frontend/js/PersonalData.js"></script>
+</body>
+</html>

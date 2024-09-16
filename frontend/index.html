@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Вячеслав Гуров">
+    <meta name="description" content="Регистрация">
+    <meta name="keywords" content="capy, Capy, Chat, CapyChat">
+    <title>CapyChat</title>
+    <link rel="stylesheet" href="css/regist.css">
+</head>
+<body>
+<div>
+    <img onmousedown="return false" id="Logo" src="images/капи1.jpg" alt="Logo">
+</div>
+<p id="nameCopmapy">CapyChat</p>
+<span id="registText">Пожалуйста, выберите вашу страну <br>и введите номер телефона.</span>
+<form id="regist-form" method="post">
+    <select name="Country" onchange="selectedCountry(this)">
+        <option>Россия</option>
+        <option>Беларусь</option>
+        <option>Китай</option>
+    </select>
+    <input id="phone" name="phone" type="text" value="+7" placeholder="телефон">
+    <input id="Next" type="submit" value="Далее">
+    <div id="error" style="color: red"></div>
+</form>
+<script src="js/regist.js"></script>
+</body>
+</html>
